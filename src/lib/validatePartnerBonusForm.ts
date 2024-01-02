@@ -15,7 +15,13 @@ export const validatePartnerBonusForm = (
   const step4 =
     values.partner_podmienky &&
     Object.keys(values.partner_podmienky)
-      .map((key) => values.partner_podmienky[key])
+      .map((key) => {
+        return Array.isArray(values.partner_podmienky[key])
+          ? (values.partner_podmienky[key] as Array<boolean>).some(
+              (value) => value === true,
+            )
+          : values.partner_podmienky[key]
+      })
       .some((value) => value === true)
 
   const step5 =

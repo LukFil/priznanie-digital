@@ -121,8 +121,18 @@ export const ConditionsQuestion = ({ disabled }) => (
       </h1>
     </legend>
     <CheckboxSmall
-      name="partner_podmienky.1"
-      label="Staral/a sa o dieťa do 3 rokov (resp. do 6 rokov s nepriaznivým zdravotným stavom), alebo poberá príspevok na opatrovanie ťažko zdravotne postihnutého"
+      name="partner_podmienky.1.1"
+      label="Staral/a sa o dieťa do 3 rokov"
+      disabled={disabled}
+    />
+    <CheckboxSmall
+      name="partner_podmienky.1.2"
+      label="Staral/a sa o dieťa do 6 rokov s nepriaznivým zdravotným stavom"
+      disabled={disabled}
+    />
+    <CheckboxSmall
+      name="partner_podmienky.1.3"
+      label="Poberá príspevok na opatrovanie ťažko zdravotne postihnutého"
       disabled={disabled}
     />
     <CheckboxSmall

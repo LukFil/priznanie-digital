@@ -62,7 +62,7 @@ export interface TaxFormUserInput {
   partner_step?: number
   partner_spolocna_domacnost?: boolean
   partner_bonus_uplatneny?: boolean
-  partner_podmienky?: Record<string, boolean>
+  partner_podmienky?: Record<string, boolean | Array<boolean>>
 
   /** SECTION  Mortage */
   r037_uplatnuje_uroky?: boolean
